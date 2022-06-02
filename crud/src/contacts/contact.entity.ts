@@ -11,7 +11,7 @@ export class Contact {
   @Column()
   lastName: string;
 
-  @Column()
+  @Column({nullable: false})
   email: string;
 
   @Column()
