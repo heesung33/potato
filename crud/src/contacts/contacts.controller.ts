@@ -20,8 +20,6 @@ export class ContactsController {
 
   @Put(':id/update')
   async update(@Param('id') id, @Body() contactData: Contact): Promise<UpdateResult> {
-    contactData.id = Number(id);
-    console.log('Update #' + contactData.id);
     return this.contactsService.update(contactData);
   }
 
